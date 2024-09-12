@@ -7,8 +7,8 @@ def test_2():
 	assert f.puissance(-2 ,3) == -8
 	assert f.puissance(-2 ,2) == 4
 	assert f.puissance(2 ,-2) == 0.25
-	try:
-		x = f.puissance(0,-2)
-		assert False
-	except ZeroDivisionError:
-		assert True
+	
+def test_3():
+	with pytest.raises(ZeroDivisionError):
+		f.puissance(0,-2)
+		
