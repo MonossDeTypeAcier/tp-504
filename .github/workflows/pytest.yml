@@ -11,7 +11,7 @@ jobs:
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
         with:
-          python-version: ${{matrix.python−version}}
+          python-version: ${{matrix.python-version}}
       - name: Set up Pytest for Demo
         run: |
           pip install pytest pytest-cov
