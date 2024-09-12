@@ -13,6 +13,6 @@ jobs:
       - name: Branch
         run : echo "Nom branche:${{github.ref}}"
       - name: OS
-        run : echo "OS :${{github.os}}"
+        run : echo "OS :${{runner.os}}"
       - name: Run tests
         run: pytest tp1/test.py
