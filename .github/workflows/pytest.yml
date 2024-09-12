@@ -10,5 +10,9 @@ jobs:
       - name: Set up Pytest for Demo
         run: |
           pip install pytest pytest-cov
+      - name: Branch
+        run : echo "Nom branche:${{github.ref}}"
+      - name: OS
+        run : echo "OS : ${{runner.os}}"
       - name: Run tests
         run: pytest tp1/test.py
