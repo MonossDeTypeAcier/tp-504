@@ -7,8 +7,15 @@ def puissance(a,b):
 	#c=a**b
 	c=a
 	i=0
-	while (i<b-1):
-		c=a*c
-		i=i+1
+	if (b<0):
+		b=abs(b)
+		while (i<b-1):		
+			c=a*c
+			i=i+1
+		c=1/c	
+	else:
+		while (i<b-1):		
+			c=a*c
+			i=i+1
 	return c
 
