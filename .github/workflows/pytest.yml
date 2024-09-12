@@ -8,6 +8,7 @@ jobs:
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
       - name: Set up Pytest for Demo
-        uses: actions/setup-pytest@v3
+        run: |
+          pip install pytest pytest-cov
       - name: Run tests
         run: pytest tp1/test.py
