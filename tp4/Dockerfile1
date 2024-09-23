@@ -1,16 +1,27 @@
-FROM debian:11
-RUN apt update && apt upgrade -y && \
-    apt install build-essential -y && \
-    apt install pkg-config -y && \
-    apt install python-dev -y && \
-    apt install python3-pip -y && \
-    apt install default-libmysqlclient-dev -y && \
-    pip3 install --upgrade pip && \
-    pip3 install flask-mysqldb && \
-    pip3 install mysql-connector-python
+FROM python:3.11
+
+#RUN apt update && apt upgrade -y && \
+ #   apt install build-essential -y && \
+  #  apt install pkg-config -y && \
+    #apt install python-dev -y && \
+   # apt install python3-pip -y && \
+    #apt install default-libmysqlclient-dev -y && \
+    #pip3 install --upgrade pip && \
+    #pip3 install flask-mysqldb && \
+    #pip3 install mysql-connector-python
+RUN apt update
+RUN apt upgrade -y
+RUN apt install build-essential -y
+RUN apt install pkg-config -y
+RUN apt install python3-pip -y
+RUN apt install default-libmysqlclient-dev -y
+RUN pip3 install --upgrade pip
+RUN pip3 install flask-mysqldb
+RUN pip3 install mysql-connector-python
+
 
 RUN mkdir /srv/templates
 COPY index.html /srv/templates
 COPY app_1.py /srv
 
-CMD ["flask", "--app","/srv/app_1","run",'host=127.0.0.1', "--debug"]
+CMD ["flask", "--app","/srv/app_1","run",'host=0.0.0.0', "--debug"]
