@@ -21,4 +21,4 @@ jobs:
       - name: OS
         run : echo "OS :${{runner.os}}"
       - name: Run tests
-        run: pytest tp1/test.py
+        run: pytest TP1/test.py
