@@ -8,7 +8,7 @@ db_config = {
     'host': 'NOM-HOTE-SERVEUR',
     'user': 'root',
     'password': 'foo',
-    'database': 'NOM-DE-LA-BDD'
+    'database': 'demosql'
 }
 
 # Initialize MySQL connection
