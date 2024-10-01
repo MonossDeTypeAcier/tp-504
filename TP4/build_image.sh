@@ -1,1 +1,1 @@
-docker build -t im-tp4 -f Dockerfile2 .
+docker build -t im-tp4 -f Dockerfile1 .

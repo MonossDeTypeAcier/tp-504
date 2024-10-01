@@ -1,0 +1,1 @@
+docker build -t im-tp4-b -f Dockerfile2 .
