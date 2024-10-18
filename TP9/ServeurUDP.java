@@ -10,11 +10,10 @@ public class ServeurUDP {
                 System.out.println("-Waiting data" );
                 DatagramPacket packet = new DatagramPacket (new byte[1024], 1024);
                 sock.receive(packet);
-                String str =new String(packet.getData());
-                System.out.println("str=" + str);
-                byte[] data = str.getBytes();
-                DatagramPacket packet2 = new DatagramPacket( data, data.length, packet.getAddress(), 1234); 
-                sock.send(packet2);
+                String str = new String( packet.getData() );
+                System.out.println(str);
+                sock.send(packet);
+                sock.close();
             }
         }
         catch (Exception var6) {
