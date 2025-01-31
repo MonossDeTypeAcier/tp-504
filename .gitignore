@@ -3,3 +3,4 @@ graphes/*.png
 graphes/*.svg
 gh-artifacts.json
 *.pdf
+*.csv
